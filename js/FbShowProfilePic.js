@@ -1,14 +1,12 @@
 (function () {
-    var converted;
+    var converted = false;
     var smallImageObject;
     var newImageUrl;
 
-    if(typeof converted === "undefined") {
-        getPicUrl()
-    }
-
     function getPicUrl() {
         
+        if(converted) return;
+
         smallImageObject = $(".profilePic")
         var smallImageUrl = smallImageObject.attr('src');
         var smallImageUrlList = smallImageUrl.split('/');
@@ -31,7 +29,7 @@
 
         smallImageObject.attr('src', newImageUrl);
 
-        converted=1;
+        converted=true;
     }
 
     smallImageObject.on('click', function() {
