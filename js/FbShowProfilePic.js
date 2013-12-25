@@ -1,5 +1,5 @@
 (function () {
-    var converted = false;
+    var converted=false;
     var smallImageObject;
     var newImageUrl;
 
