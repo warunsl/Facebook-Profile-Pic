@@ -1,5 +1,5 @@
 (function () {
-    loadfile('https://bitbucket.org/warunsl/facebook-profile-pic/raw/d539f6880043176cb6ccd55eb9d7c745e5a4d1cb/js/jquery-1.10.2.min.js', 'js')
+    /*loadfile('https://bitbucket.org/warunsl/facebook-profile-pic/raw/d539f6880043176cb6ccd55eb9d7c745e5a4d1cb/js/jquery-1.10.2.min.js', 'js')*/
 
     var smallImageObject = $(".profilePic")
     var smallImageUrl = smallImageObject.attr('src');
