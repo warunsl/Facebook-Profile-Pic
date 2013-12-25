@@ -24,8 +24,8 @@
     smallImageObject.attr('src', newImageUrl);
 
     smallImageObject.on('click', function() {
-        loadfile('https://bitbucket.org/warunsl/facebook-profile-pic/raw/d539f6880043176cb6ccd55eb9d7c745e5a4d1cb/js/lightbox-2.6.min.js', 'js')
-        loadfile('https://bitbucket.org/warunsl/facebook-profile-pic/raw/d539f6880043176cb6ccd55eb9d7c745e5a4d1cb/css/lightbox.css', 'css')
+        /*loadfile('https://bitbucket.org/warunsl/facebook-profile-pic/raw/d539f6880043176cb6ccd55eb9d7c745e5a4d1cb/js/lightbox-2.6.min.js', 'js')
+        loadfile('https://bitbucket.org/warunsl/facebook-profile-pic/raw/d539f6880043176cb6ccd55eb9d7c745e5a4d1cb/css/lightbox.css', 'css')*/
         smallImageObject.attr('data-lightbox', newImageUrl);        
     })
 
