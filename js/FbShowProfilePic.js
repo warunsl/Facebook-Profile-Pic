@@ -3,6 +3,8 @@
     var newImageUrl;
     var converted=false;
 
+    getPicUrl();
+
     function getPicUrl() {
         
         if(converted) return;
