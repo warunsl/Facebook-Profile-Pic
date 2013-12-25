@@ -1,6 +1,7 @@
 (function () {
     var converted;
     var smallImageObject;
+    var newImageUrl;
 
     if(typeof converted === "undefined") {
         getPicUrl()
@@ -20,7 +21,7 @@
             }
         });
 
-        var newImageUrl = "";
+        newImageUrl = "";
         $.each(newImageUrlList, function( index, value ){
             newImageUrl = newImageUrl + value;
         });
