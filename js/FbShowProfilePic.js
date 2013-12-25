@@ -1,7 +1,7 @@
 (function () {
-    var converted=false;
     var smallImageObject;
     var newImageUrl;
+    var converted=false;
 
     function getPicUrl() {
         
