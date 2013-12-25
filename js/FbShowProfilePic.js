@@ -1,31 +1,37 @@
 (function () {
-    /*loadfile('https://bitbucket.org/warunsl/facebook-profile-pic/raw/d539f6880043176cb6ccd55eb9d7c745e5a4d1cb/js/jquery-1.10.2.min.js', 'js')*/
+    var converted;
+    if(typeof converted === "undefined") {
+        getPicUrl()
+    }
 
-    var smallImageObject = $(".profilePic")
-    var smallImageUrl = smallImageObject.attr('src');
-    var smallImageUrlList = smallImageUrl.split('/');
-    var newImageUrlList = new Array();
+    function getPicUrl() {
+        
+        var smallImageObject = $(".profilePic")
+        var smallImageUrl = smallImageObject.attr('src');
+        var smallImageUrlList = smallImageUrl.split('/');
+        var newImageUrlList = new Array();
 
-    $.each(smallImageUrlList , function( index, value ) {
-        if(index!=4 && index!=5) {
-            newImageUrlList.push(value)
-            newImageUrlList.push("/")
-        }
-    });
+        $.each(smallImageUrlList , function( index, value ) {
+            if(index!=4 && index!=5) {
+                newImageUrlList.push(value)
+                newImageUrlList.push("/")
+            }
+        });
 
-    var newImageUrl = "";
-    $.each(newImageUrlList, function( index, value ){
-        newImageUrl = newImageUrl + value;
-    });
+        var newImageUrl = "";
+        $.each(newImageUrlList, function( index, value ){
+            newImageUrl = newImageUrl + value;
+        });
 
-    newImageUrl = newImageUrl.substring(0, newImageUrl.length - 1);
-    console.log(newImageUrl);
+        newImageUrl = newImageUrl.substring(0, newImageUrl.length - 1);
+        console.log(newImageUrl);
 
-    smallImageObject.attr('src', newImageUrl);
+        smallImageObject.attr('src', newImageUrl);
+
+        converted=1;
+    }
 
     smallImageObject.on('click', function() {
-        /*loadfile('https://bitbucket.org/warunsl/facebook-profile-pic/raw/d539f6880043176cb6ccd55eb9d7c745e5a4d1cb/js/lightbox-2.6.min.js', 'js')
-        loadfile('https://bitbucket.org/warunsl/facebook-profile-pic/raw/d539f6880043176cb6ccd55eb9d7c745e5a4d1cb/css/lightbox.css', 'css')*/
         smallImageObject.attr('data-lightbox', newImageUrl);        
     })
 
