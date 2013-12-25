@@ -1,12 +1,14 @@
 (function () {
     var converted;
+    var smallImageObject;
+
     if(typeof converted === "undefined") {
         getPicUrl()
     }
 
     function getPicUrl() {
         
-        var smallImageObject = $(".profilePic")
+        smallImageObject = $(".profilePic")
         var smallImageUrl = smallImageObject.attr('src');
         var smallImageUrlList = smallImageUrl.split('/');
         var newImageUrlList = new Array();
