@@ -1,6 +1,5 @@
 (function () {
     getPic=function() {
-        if(converted) return;
 
         // Compute the new URL which has the enlarged pic
         var urls = ["https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/",
