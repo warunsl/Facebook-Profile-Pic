@@ -35,6 +35,7 @@
             var imageLink = $(this).find("a.profilePicThumb");
             imageLink.attr("target", "_blank");
             window.open(imageLink.attr("href"));
+            console.log("Enlarged image linkified.")
             return false;
         });
 
