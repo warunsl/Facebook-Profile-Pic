@@ -5,11 +5,6 @@ Code to exploit the facebook profile pic bug. Displays the full size profile pho
 
 Create a bookmarket in the browser with the following code :     
 
-    javascript:(function(){
-	var d=document.createElement('script');
-	d.setAttribute('type','text/javascript');
-	d.setAttribute('src','https://code.jquery.com/jquery-1.11.0-beta3.min.js');
-	document.body.appendChild(d);
-	})()    
+    javascript:(function(){var e=document.createElement("script");e.setAttribute("type","text/javascript");e.setAttribute("src","https://code.jquery.com/jquery-1.11.0-beta3.min.js");document.body.appendChild(e)})()   
 
-Works with mozilla, not tested with Chrome. 
+Works with Mozilla, not tested with Chrome. 
