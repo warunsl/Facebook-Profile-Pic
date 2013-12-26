@@ -1,22 +1,31 @@
 (function () {
-    converted=false;
-
     getPic=function() {
         if(converted) return;
 
         // Compute the new URL which has the enlarged pic
-        var b=["https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/","https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/","https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn3/","https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn4/","https://scontent-a-lax.xx.fbcdn.net/hphotos-frc1/","https://scontent-a-lax.xx.fbcdn.net/hphotos-frc2/","https://scontent-a-lax.xx.fbcdn.net/hphotos-frc3/","https://scontent-a-lax.xx.fbcdn.net/hphotos-frc4/","https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash1/","https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash2/","https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash3/","https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash4/"];
-        n=$(".profilePic")[0]["src"].lastIndexOf("/");
-        random=Math.floor((Math.random()*11));
-        person_img=$(".profilePic")[0]["src"].substr(n+1);
-        final_url=b[random]+person_img;
+        var urls = ["https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/",
+                    "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/",
+                    "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn3/",
+                    "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn4/",
+                    "https://scontent-a-lax.xx.fbcdn.net/hphotos-frc1/",
+                    "https://scontent-a-lax.xx.fbcdn.net/hphotos-frc2/",
+                    "https://scontent-a-lax.xx.fbcdn.net/hphotos-frc3/",
+                    "https://scontent-a-lax.xx.fbcdn.net/hphotos-frc4/",
+                    "https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash1/",
+                    "https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash2/",
+                    "https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash3/",
+                    "https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash4/"];
 
-        converted=true;
-        lightbox(final_url);
+        current_url_index = document.getElementsByClassName("profilePic img")[0]["src"].lastIndexOf("/");
+        random = Math.floor((Math.random()*11));
+        person_img = document.getElementsByClassName("profilePic img")[0]["src"].substr(current_url_index + 1);
+        final_url = urls[random] + person_img;
+
+        display(final_url);
     };
 
     // Code to display the enlarged pic
-    lightbox=function(newImageUrl) {
+    display=function(newImageUrl) {
 
         aElement = document.createElement('a');
         aElement.setAttribute('rel', 'lightbox');
