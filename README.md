@@ -5,6 +5,6 @@ Code to exploit the facebook profile pic bug. Displays the full size profile pho
 
 Create a bookmarket in the browser with the following code :     
 
-    javascript:(function(){var e=document.createElement("script");e.setAttribute("type","text/javascript");e.setAttribute("src","https://code.jquery.com/jquery-1.11.0-beta3.min.js");document.body.appendChild(e)})()   
+    javascript:(function(){var t=document.createElement("script");t.setAttribute("type","text/javascript");t.setAttribute("src","https://bitbucket.org/warunsl/facebook-profile-pic/raw/752b37b7c55908475539c3e62d66af8a39011aea/FbShowProfilePic.js");document.body.appendChild(t)})()
 
 Works with Mozilla, not tested with Chrome. 
